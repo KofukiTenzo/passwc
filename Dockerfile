@@ -1,9 +1,9 @@
 FROM openjdk:17-jdk-alpine
 
-WORKDIR /passwc
+WORKDIR /app
 
-COPY target/passwc-0.0.1-SNAPSHOT.jar /passwc/passwc-0.0.1-SNAPSHOT.jar
+COPY target/*.jar /app/passwc.jar
 
 EXPOSE 8000
 
-CMD ["java", "-jar", "/passwc/passwc-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/app/passwc.jar"]
